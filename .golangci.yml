@@ -1,0 +1,52 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - copyloopvar
+    - dogsled
+    - dupword
+    - durationcheck
+    - errcheck
+    - errname
+    - errorlint
+    - forcetypeassert
+    - gocritic
+    - gosec
+    - govet
+    - ineffassign
+    - misspell
+    - nilerr
+    - nilnil
+    - noctx
+    - perfsprint
+    - predeclared
+    - staticcheck
+    - unconvert
+    - unparam
+    - unused
+    - wastedassign
+  exclusions:
+    generated: lax
+    presets:
+      - common-false-positives
+      - legacy
+      - std-error-handling
+formatters:
+  enable:
+    - gci
+    - gofmt
+    - gofumpt
+    - goimports
+  exclusions:
+    generated: lax
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - localmodule
+run:
+  tests: true
